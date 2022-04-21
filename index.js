@@ -16,6 +16,22 @@ app.get("/", (req, res) => {
   return res.redirect("home.html");
 });
 
+app.get("/ar-example-1", (req, res) => {
+  res.set({
+    "Allow-access-Allow-Origin": "*",
+  });
+
+  return res.redirect("ar-example-1.html");
+});
+
+app.get("/ar-example-2", (req, res) => {
+  res.set({
+    "Allow-access-Allow-Origin": "*",
+  });
+
+  return res.redirect("ar-example-2.html");
+});
+
 app.listen(port, () => {
   console.log(`The application started successfully on port ${port}`);
 });
