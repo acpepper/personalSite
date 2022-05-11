@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
     "Allow-access-Allow-Origin": "*",
   });
 
-  return res.redirect("home.html");
+  return res.redirect("home/index.html");
 });
 
 app.get("/ar-example-1", (req, res) => {
@@ -21,15 +21,15 @@ app.get("/ar-example-1", (req, res) => {
     "Allow-access-Allow-Origin": "*",
   });
 
-  return res.redirect("ar-example-1.html");
+  return res.redirect("ar-example-1/index.html");
 });
 
-app.get("/ar-example-2", (req, res) => {
+app.get("/new-home", (req, res) => {
   res.set({
     "Allow-access-Allow-Origin": "*",
   });
 
-  return res.redirect("ar-example-2.html");
+  return res.redirect("new-home/index.html");
 });
 
 app.listen(port, () => {
