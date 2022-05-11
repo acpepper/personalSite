@@ -21,7 +21,8 @@ jobs:
             git fetch
             git reset --hard
             git pull
+            touch test.txt
             npm i
-            pm2 restart personal site --update-env
+            pm2 restart personal\ site --update-env
             exit
           '
