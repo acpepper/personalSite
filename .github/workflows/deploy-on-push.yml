@@ -15,14 +15,13 @@ jobs:
 
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} \
-          '
-            cd personalSite
-            git fetch
-            git reset --hard
-            git pull
-            touch test.txt
-            npm i
-            pm2 restart personal\ site --update-env
-            exit
-          '
+          ssh -tt -i private_key ${USER_NAME}@${HOSTNAME} << EOF
+          # the following commands are passed directly to ssh on invokation
+          cd personalSite
+          git fetch
+          git reset --hard
+          git pull
+          npm i
+          pm2 restart personal\ site --update-env
+          exit
+          EOF
