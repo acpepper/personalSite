@@ -14,7 +14,7 @@ jobs:
           USER_NAME: ${{ secrets.EC2_USER_NAME  }}
 
         run: |
-          echo "$EC2_PRIVATE_KEY" > private_key && chmod 600 private_key
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -tt -i private_key ${USER_NAME}@${HOSTNAME} << EOF
           # the following commands are passed directly to ssh on invokation
           cd personalSite
