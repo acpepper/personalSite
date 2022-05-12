@@ -59,7 +59,6 @@ $(".slideshow-left")
     }
   })
   .on("mousedown touchstart", function () {
-    console.log("hi");
     dragging = true;
     tracking = $(".slick-track", $slider).css("transform");
     tracking = parseInt(tracking.split(",")[5]);
