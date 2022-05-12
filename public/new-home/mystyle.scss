@@ -17,7 +17,7 @@ html {
     
     .slider-item {
 	display: flex;
-	flex-direction: row;
+	flex-flow: row wrap;
 	position: relative;
 	z-index: 2;
 	width: 100%;
@@ -30,7 +30,17 @@ html {
 
 	img {
 	    width: 20em;
-	    height: auto;
+	    height: 20em;
+	}
+
+	.item-red {
+	    background-color: #aa0000
+	}
+	.item-green {
+	    background-color: #00aa00
+	}
+	.item-blue {
+	    background-color: #0000aa
 	}
 	
 	// .item {

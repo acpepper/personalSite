@@ -17,7 +17,7 @@ html {
 }
 .slider .slider-item {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   position: relative;
   z-index: 2;
   width: 100%;
@@ -29,7 +29,16 @@ html {
 }
 .slider .slider-item img {
   width: 20em;
-  height: auto;
+  height: 20em;
+}
+.slider .slider-item .item-red {
+  background-color: #aa0000;
+}
+.slider .slider-item .item-green {
+  background-color: #00aa00;
+}
+.slider .slider-item .item-blue {
+  background-color: #0000aa;
 }
 .slider .slick-dots {
   position: fixed;
