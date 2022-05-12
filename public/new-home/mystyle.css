@@ -1,4 +1,12 @@
-.slider {
+body,
+html {
+  height: 100%;
+  background: #110101;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.slideshow {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -7,33 +15,15 @@
   height: 100vh;
   overflow: hidden;
 }
-.slider .slider-item {
+.slideshow .slider {
   width: 100vw;
   height: 100vw;
   z-index: 2;
 }
-.slider .slider * {
+.slideshow .slider * {
   outline: none;
 }
-.slider .slider-item .item {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
-  border: none;
-}
-.slider .slider-item .item .text {
-  display: none;
-}
-.slider .slider-item .item img {
-  min-width: 101%;
-  min-height: 101%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.slider .slick-dots {
+.slideshow .slick-dots {
   position: fixed;
   z-index: 100;
   width: 40px;
@@ -46,18 +36,18 @@
   color: #fff;
   display: block;
 }
-.slider .slick-dots li {
+.slideshow .slick-dots li {
   display: block;
   width: 100%;
   height: auto;
 }
-.slider .slick-dots li button {
+.slideshow .slick-dots li button {
   position: relative;
   width: 20px;
   height: 15px;
   text-align: center;
 }
-.slider .slick-dots li button:before {
+.slideshow .slick-dots li button:before {
   content: "";
   background: #fff;
   color: #fff;
@@ -72,7 +62,19 @@
   transition: all 0.3s ease-in-out;
   opacity: 0.6;
 }
-.slider .slick-dots li.slick-active button:before {
+.slideshow .slick-dots li.slick-active button:before {
   width: 40px;
   opacity: 1;
 }
+.slideshow.slideshow-right {
+  left: 0;
+  z-index: 1;
+  width: 50vw;
+  pointer-events: none;
+}
+.slideshow.slideshow-right .slider {
+  left: 0;
+  position: absolute;
+}
+
+/*# sourceMappingURL=mystyle.css.map */
