@@ -16,6 +16,7 @@ html {
     overflow: hidden;
     
     .slider-item {
+	position: relative;
 	width: 50%;
 	height: 50%;
 	justify-content: center;
@@ -24,6 +25,15 @@ html {
 	
 	* {
 	    outline: none;
+	}
+
+	img {
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+	    max-width: 80em;
+	    max-height: 80em;
 	}
 	
 	// .item {

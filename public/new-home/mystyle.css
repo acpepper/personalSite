@@ -16,6 +16,7 @@ html {
   overflow: hidden;
 }
 .slider .slider-item {
+  position: relative;
   width: 50%;
   height: 50%;
   justify-content: center;
@@ -24,6 +25,14 @@ html {
 }
 .slider .slider-item * {
   outline: none;
+}
+.slider .slider-item img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80em;
+  max-height: 80em;
 }
 .slider .slick-dots {
   position: fixed;
