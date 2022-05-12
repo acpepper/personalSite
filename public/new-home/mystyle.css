@@ -1,3 +1,23 @@
+.item-red {
+  background-color: #aa0000;
+}
 
+.item-green {
+  background-color: #00aa00;
+}
+
+.item-blue {
+  background-color: #0000aa;
+}
+
+.nav-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.slider .slider-item {
+  display: flex;
+}
 
 /*# sourceMappingURL=mystyle.css.map */
