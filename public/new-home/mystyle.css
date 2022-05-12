@@ -31,8 +31,8 @@ html {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  max-width: 80em;
-  max-height: 80em;
+  width: 20em;
+  height: auto;
 }
 .slider .slick-dots {
   position: fixed;
