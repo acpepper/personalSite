@@ -2,11 +2,11 @@ body,
 html {
   height: 100%;
   background: #110101;
-  font-family: "Roboto", sans-serif;
-  overflow: hidden;
+  font-family: monospace, serif;
+  overflow: auto;
 }
 
-.slideshow {
+.slider {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -15,15 +15,17 @@ html {
   height: 100vh;
   overflow: hidden;
 }
-.slideshow .slider {
+.slider .slider-item {
   width: 100vw;
   height: 100vw;
   z-index: 2;
+  justify-content: center;
+  max-width: 80em;
 }
-.slideshow .slider * {
+.slider .slider-item * {
   outline: none;
 }
-.slideshow .slick-dots {
+.slider .slick-dots {
   position: fixed;
   z-index: 100;
   width: 40px;
@@ -36,18 +38,18 @@ html {
   color: #fff;
   display: block;
 }
-.slideshow .slick-dots li {
+.slider .slick-dots li {
   display: block;
   width: 100%;
   height: auto;
 }
-.slideshow .slick-dots li button {
+.slider .slick-dots li button {
   position: relative;
   width: 20px;
   height: 15px;
   text-align: center;
 }
-.slideshow .slick-dots li button:before {
+.slider .slick-dots li button:before {
   content: "";
   background: #fff;
   color: #fff;
@@ -62,19 +64,9 @@ html {
   transition: all 0.3s ease-in-out;
   opacity: 0.6;
 }
-.slideshow .slick-dots li.slick-active button:before {
+.slider .slick-dots li.slick-active button:before {
   width: 40px;
   opacity: 1;
-}
-.slideshow.slideshow-right {
-  left: 0;
-  z-index: 1;
-  width: 50vw;
-  pointer-events: none;
-}
-.slideshow.slideshow-right .slider {
-  left: 0;
-  position: absolute;
 }
 
 /*# sourceMappingURL=mystyle.css.map */

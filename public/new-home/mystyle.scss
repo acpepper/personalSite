@@ -2,11 +2,11 @@ body,
 html {
     height: 100%;
     background: #110101;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    font-family: monospace, serif;
+    overflow: auto;
 }
 
-.slideshow {
+.slider {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -15,10 +15,12 @@ html {
     height: 100vh;
     overflow: hidden;
     
-    .slider {
+    .slider-item {
 	width: 100vw;
 	height: 100vw;
 	z-index: 2;
+	justify-content: center;
+	max-width: 80em;
 	
 	* {
 	    outline: none;
@@ -98,17 +100,17 @@ html {
 	}
     }
     
-    &.slideshow-right {
-	left: 0;
-	z-index: 1;
-	width: 50vw;
-	pointer-events: none;
+    // &.slideshow-right {
+    // 	left: 0;
+    // 	z-index: 1;
+    // 	width: 50vw;
+    // 	pointer-events: none;
 	
-	.slider {
-	    left: 0;
-	    position: absolute;
-	}
-    }
+    // 	.slider {
+    // 	    left: 0;
+    // 	    position: absolute;
+    // 	}
+    // }
 }
 
 // .slideshow-text {
