@@ -16,10 +16,10 @@ html {
     overflow: hidden;
     
     .slider-item {
-	width: 100vw;
-	height: 100vw;
-	z-index: 2;
+	// width: 100vw;
+	// height: 100vw;
 	justify-content: center;
+	z-index: 2;
 	max-width: 80em;
 	
 	* {

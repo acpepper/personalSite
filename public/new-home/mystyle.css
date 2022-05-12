@@ -16,10 +16,8 @@ html {
   overflow: hidden;
 }
 .slider .slider-item {
-  width: 100vw;
-  height: 100vw;
-  z-index: 2;
   justify-content: center;
+  z-index: 2;
   max-width: 80em;
 }
 .slider .slider-item * {
