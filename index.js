@@ -16,20 +16,20 @@ app.get("/", (req, res) => {
   return res.redirect("home.html");
 });
 
-app.get("/ar-example-1", (req, res) => {
-  res.set({
-    "Allow-access-Allow-Origin": "*",
-  });
+app.get("/resume", (req, res) => {
+    res.set({
+        "Allow-access-Allow-Origin": "*",
+    });
 
-  return res.redirect("ar-example-1.html");
+    return res.redirect("resume.html");
 });
 
-app.get("/ar-example-2", (req, res) => {
-  res.set({
-    "Allow-access-Allow-Origin": "*",
-  });
+app.get("/portfolio", (req, res) => {
+    res.set({
+        "Allow-access-Allow-Origin": "*",
+    });
 
-  return res.redirect("ar-example-2.html");
+    return res.redirect("portfolio.html")
 });
 
 app.listen(port, () => {
