@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- we import arjs version without NFT but with marker + location based support -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  <body style="margin : 0px; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <!-- we use cors proxy to avoid cross-origin problems -->
+    <head>
+        <title>Gesture Interactions - A-Frame & AR.js</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="styles.css">
 
-        <!--
-          ⚠️⚠️⚠️
-          https://arjs-cors-proxy.herokuapp.com/ is now offline, Heroku has dismissed all his free plans from November 2022.
-          You need to host your own proxy and use it instead. The proxy is based on CORS Anywhere (see https://github.com/Rob--W/cors-anywhere).
-          ⚠️⚠️⚠️
-        -->
-        <a-entity
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          gltf-model="/assets/free_car_001.gltf"
-        ></a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+        <script src="gesture-detector.js"></script>
+        <script src="gesture-handler.js"></script>
+    </head>
+
+    <body>
+        <a-scene
+            arjs
+            embedded
+            renderer="logarithmicDepthBuffer: true;"
+            vr-mode-ui="enabled: false"
+            gesture-detector
+            id="scene"
+        >
+            <a-assets>
+                <a-asset-item
+                    id="example-model"
+                    src="/assets/ar-example-1.gltf"
+                >
+                </a-asset-item>
+            </a-assets>
+
+            <a-marker
+                preset="hiro"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                    id="example-model-entity"
+                    gltf-model="#example-model"
+                    position="0 0 0"
+                    scale="0.05 0.05 0.05"
+                    class="clickable"
+                    gesture-handler
+                >
+                </a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
 </html>
