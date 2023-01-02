@@ -1,0 +1,3 @@
+[submodule "public/rhythmTest"]
+	path = public/rhythmTest
+	url = git@github.com:acpepper/FenderTamaMarui_webapp
